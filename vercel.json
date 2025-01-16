@@ -1,12 +1,12 @@
 {
  "rewrites": [
    {
-     "source": "/engfe2",
+     "source": "/spandeb-chat",
      "destination": "/index1.html"
  
    },
    {
-    "source": "/engfe3",
+    "source": "/spandeb-1",
     "destination": "/new-page/index.html"
 
   },
