@@ -462,13 +462,13 @@ src="https://www.facebook.com/tr?id=7811291055634659&ev=PageView&noscript=1"
     const currentConversation = conversation[currentStep];
 
     // Validar respuesta a la pregunta de $10,000
-    if (
-      currentStep === 4 && 
-      input === "No"
-    ) {
-      addMessage("Las preguntas que respondió nos han ayudado a determinar que no podemos ayudarlo en este momento.");
-      return; // Detener la conversación
-    }
+    // if (
+    //   currentStep === 4 && 
+    //   input === "No"
+    // ) {
+    //   addMessage("Las preguntas que respondió nos han ayudado a determinar que no podemos ayudarlo en este momento.");
+    //   return; // Detener la conversación
+    // }
 
     currentStep++;
     processConversation();
