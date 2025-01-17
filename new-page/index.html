@@ -254,6 +254,9 @@ liquidación de deudas</p>
 								
 									</p>
 								</div>
+								<div id="msg56" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+									<p class="text-md text-gray-800">¡Date prisa, tu precalificación vence en los próximos 2 minutos!</p>
+								</div>
 
 								<div id="msg18" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
 									<p class="text-md text-gray-800">Lo sentimos, pero en base a tus respuestas no podemos ayudarte en este momento.</p>
@@ -721,6 +724,11 @@ liquidación de deudas</p>
 											setTimeout(function () {
 												$('.temp-typing').remove();
 												$('#msg17').removeClass('hidden');
+												setTimeout(() => {
+													$('.temp-typing').remove();
+													$('#msg56').removeClass('hidden');
+													scrollToBottom();
+												}, 4000);
 												//$('#tcpa').removeClass('hidden');
 												scrollToBottom();
 											}, 0);
