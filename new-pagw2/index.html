@@ -346,12 +346,16 @@ src="https://www.facebook.com/tr?id=7811291055634659&ev=PageView&noscript=1"
       "delay": 1000 
     },
     { 
-      "text": "No olvides mencionar que debes más de $7,000 para tu aprobación rápida.", 
+      "text": "null", 
       "delay": 1000, 
       "callButton": true, 
       "buttonText": "+1(855) 667-0055",
       "buttonLink": "tel:+18556670055" 
-    }
+    },
+    { 
+      "text": "¡Date prisa, tu precalificación vence en los próximos 2 minutos!👇", 
+      "delay": 1000 
+    },
   ];
 
   document.getElementById('agentHeader').textContent = `${agentName} is Online`;
@@ -483,11 +487,15 @@ src="https://www.facebook.com/tr?id=7811291055634659&ev=PageView&noscript=1"
       
       setTimeout(() => {
         removeTypingIndicator(typingIndicator);
-        addMessage(step.text);
+        if(step.text !== "null"){
+          addMessage(step.text);
+        }
         if (step.options) {
           addOptions(step.options);
         } else if (step.callButton) {
           addCallButton();
+          currentStep++;
+          processConversation();
         } else {
           currentStep++;
           processConversation();
