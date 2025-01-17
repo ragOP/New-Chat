@@ -10,6 +10,11 @@
     "destination": "/new-page/index.html"
 
   },
+  {
+    "source": "/spandeb-2",
+    "destination": "/new-pagw2/index.html"
+
+  },
   
    {
      "source": "/",
